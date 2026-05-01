@@ -1,10 +1,10 @@
-# BigQuery MCP Toolbox Agent
+# Hotel Agent MCP Toolbox (Cloud SQL)
 
-This project provides a toolbox agent designed to interface with Google BigQuery and related Google Cloud Platform (GCP) services, leveraging the Google ADK (Agent Development Kit) and AI Platform. The agent is intended to streamline data operations, automate workflows, and integrate advanced analytics or AI capabilities into BigQuery-powered environments.
+This project provides a toolbox agent designed to interface with Google Cloud SQL (Postgres) and related Google Cloud Platform (GCP) services, leveraging the Google ADK (Agent Development Kit) and AI Platform. The agent is intended to streamline data operations, automate workflows, and integrate advanced analytics or AI capabilities into SQL-powered environments.
 
 ## Features
 
-- **BigQuery Integration:** Seamlessly interact with Google BigQuery datasets and tables.
+- **Cloud SQL Integration:** Seamlessly interact with Google Cloud SQL (Postgres) datasets and tables.
 - **AI Platform Extension:** Utilize AI Platform engines and agent capabilities for advanced analytics.
 - **Cloud Storage Support:** Read from and write to Google Cloud Storage as part of your data workflows.
 - **Extensible Toolbox:** Built on `toolbox-core` for modularity and reusability.
@@ -12,7 +12,7 @@ This project provides a toolbox agent designed to interface with Google BigQuery
 ## Requirements
 
 - Python 3.8+
-- Google Cloud account with access to BigQuery, AI Platform, and Cloud Storage
+- Google Cloud account with access to Cloud SQL, AI Platform, and Cloud Storage
 
 Install dependencies:
 ```bash
@@ -39,16 +39,17 @@ pip install -r requirements.txt
 
 ## Usage
 
-_Usage instructions depend on the agent's interface (CLI, script, or API). Please provide additional details or see the `main.py` for entry points._
+The agent is defined in `agent.py` and uses the MCP Toolbox to connect to a database.
 
-Example (if run as a script):
+1. Set up the MCP Toolbox as described in `instructions.txt`.
+2. Run the agent (example):
 ```bash
-python main.py --help
+python agent.py
 ```
 
 ## Configuration
 
-- Ensure you have appropriate IAM roles for BigQuery, AI Platform, and Cloud Storage.
+- Ensure you have appropriate IAM roles for Cloud SQL, AI Platform, and Cloud Storage.
 - Update any configuration files or environment variables as needed for your project.
 
 ## Contributing
@@ -64,7 +65,3 @@ Contributions are welcome! Please open issues or submit PRs for bug fixes, featu
 - [Google ADK](https://github.com/google/adk)
 - [Google Cloud Platform](https://cloud.google.com/)
 - [toolbox-core](https://pypi.org/project/toolbox-core/)
-
----
-
-_If you have code samples, command-line options, or configuration examples, please provide them for a more complete README._
